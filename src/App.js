@@ -1,23 +1,25 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
+import { Provider } from "react-redux";
+import { store } from "./store";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Login from "./pages/Login";
-import Join from "./pages/Join";
-import Main from "./pages/Main";
+import DiaryWrite from "./pages/DiaryWrite";
 import DiaryList from "./pages/DiaryList";
-import DiaryDetail from "./pages/DiaryDetail";
-import NotFound from "./pages/NotFound";
+import Main from "./pages/Main";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/join" element={<Join />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/diary-list" element={<DiaryList />} />
-        <Route path="/diary/:id" element={<DiaryDetail />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/diary-list" element={<DiaryList />} />
+          <Route path="/diary" element={<DiaryWrite />} />
+          <Route path="/" element={<Main />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

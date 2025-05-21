@@ -1,24 +1,26 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import styles from "../../styles/components/FooterMobile.module.scss";
 import { FaHome, FaCalendarAlt, FaBook, FaShoppingCart } from "react-icons/fa";
 
 const FooterMobile = () => {
   return (
     <nav className={styles.footerMobile}>
-      <ul className={styles.navLinks}>
-        <li>
-          <FaHome /> 홈
-        </li>
-        <li>
-          <FaCalendarAlt /> 일정
-        </li>
-        <li>
-          <FaBook /> 일기쓰기
-        </li>
-        <li>
-          <FaShoppingCart /> 구매
-        </li>
-      </ul>
+      <Link to="/">
+        <FaHome />
+        <span>홈</span>
+      </Link>
+      <Link to="/calendar">
+        <FaCalendarAlt />
+        <span>일정</span>
+      </Link>
+      <Link to="/diary">
+        <FaBook />
+        <span>일기쓰기</span>
+      </Link>
+      <Link to="/shop">
+        <FaShoppingCart />
+        <span>구매</span>
+      </Link>
     </nav>
   );
 };
