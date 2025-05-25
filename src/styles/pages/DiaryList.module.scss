@@ -1,48 +1,80 @@
 .container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 24px;
-  background-color: #fffaf5;
+  background: #fff7f2;
+  border-radius: 16px;
 }
 
 .title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
-  color: #ff7f50;
-  margin-bottom: 20px;
   text-align: center;
-}
-
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.item {
-  background-color: #fff;
-  border: 1px solid #f0c4aa;
-  border-radius: 12px;
-  padding: 16px;
   margin-bottom: 16px;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s;
+  color: #f97316; // 오렌지
+}
 
-  &:hover {
-    transform: translateY(-2px);
-    background-color: #fff1e9;
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.dayCell {
+  padding: 10px 0;
+  border-radius: 10px;
+  background: #fff;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.sun {
+  color: #ef4444; // 일요일 빨강
+}
+.sat {
+  color: #3b82f6; // 토요일 파랑
+}
+.faded {
+  color: #ccc;
+}
+.today {
+  border: 2px solid #f97316;
+  background: #fff8eb;
+  font-weight: bold;
+}
+
+.monthHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #f97316;
+
+  button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #f97316;
   }
 }
 
-.itemTitle {
-  font-size: 16px;
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
   font-weight: bold;
   margin-bottom: 6px;
-  color: #333;
-}
-
-.itemDate {
-  font-size: 13px;
-  color: #999;
+  font-size: 14px;
+  color: #666;
 }

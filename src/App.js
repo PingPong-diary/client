@@ -17,6 +17,8 @@ function App() {
           <Route path="/diary-list" element={<DiaryList />} />
           <Route path="/diary" element={<DiaryWrite />} />
           <Route path="/" element={<Main />} />
+          <Route path="/diary/list" element={<DiaryList />} />
+          <Route path="/daily" element={<dailyWrite />} />
         </Routes>
       </BrowserRouter>
     </Provider>
