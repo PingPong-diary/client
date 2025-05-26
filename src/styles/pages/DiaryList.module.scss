@@ -6,50 +6,6 @@
   border-radius: 16px;
 }
 
-.title {
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 16px;
-  color: #f97316; // 오렌지
-}
-
-.calendarGrid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
-  text-align: center;
-  font-size: 14px;
-}
-
-.dayCell {
-  padding: 10px 0;
-  border-radius: 10px;
-  background: #fff;
-  min-height: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-}
-
-.sun {
-  color: #ef4444; // 일요일 빨강
-}
-.sat {
-  color: #3b82f6; // 토요일 파랑
-}
-.faded {
-  color: #ccc;
-}
-.today {
-  border: 2px solid #f97316;
-  background: #fff8eb;
-  font-weight: bold;
-}
-
 .monthHeader {
   display: flex;
   justify-content: center;
@@ -77,4 +33,12 @@
   margin-bottom: 6px;
   font-size: 14px;
   color: #666;
+}
+
+.sun {
+  color: #ef4444;
+}
+
+.sat {
+  color: #3b82f6;
 }

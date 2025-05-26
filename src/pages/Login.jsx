@@ -3,7 +3,7 @@ import { loginSuccess } from "../store/userSlice";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import styles from "../styles/pages/Login.module.scss"; // ✅ SCSS import
+import styles from "../styles/pages/Login.module.scss";
 
 export default function Login() {
   const dispatch = useDispatch();

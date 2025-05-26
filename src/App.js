@@ -7,18 +7,20 @@ import Login from "./pages/Login";
 import DiaryWrite from "./pages/DiaryWrite";
 import DiaryList from "./pages/DiaryList";
 import Main from "./pages/Main";
+import CalendarPage from "./pages/CalendarPage";
+import DailyWrite from "./pages/DailyWrite";
 
 function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/diary-list" element={<DiaryList />} />
-          <Route path="/diary" element={<DiaryWrite />} />
           <Route path="/" element={<Main />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/diary" element={<DiaryWrite />} />
           <Route path="/diary/list" element={<DiaryList />} />
-          <Route path="/daily" element={<dailyWrite />} />
+          <Route path="/daily/write" element={<DailyWrite />} />
+          <Route path="/calendar" element={<CalendarPage />} />
         </Routes>
       </BrowserRouter>
     </Provider>

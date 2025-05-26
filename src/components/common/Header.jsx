@@ -21,9 +21,9 @@ const Header = () => {
       </div>
 
       <nav className={styles.navBar}>
-        <div className={styles.logo}>
+        <Link to="/" className={styles.logo}>
           <img src="/assets/images/logo.png" alt="핑퐁 다이어리 로고" />
-        </div>
+        </Link>
         <ul className={styles.navLinks}>
           <li>
             <Link to="/">홈</Link>

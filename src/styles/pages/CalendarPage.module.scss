@@ -1,0 +1,99 @@
+.calendarContainer {
+  background-color: #fff7f1;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  font-family: "Pretendard", sans-serif;
+}
+
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #ff7e00;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.navBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ff7e00;
+}
+
+.monthLabel {
+  flex: 1;
+  text-align: center;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.dayLabel {
+  text-align: center;
+  font-weight: 600;
+  color: #444;
+  padding: 0.5rem 0;
+}
+
+.sunday {
+  color: #ff4d4d !important;
+}
+
+.saturday {
+  color: #4d76ff !important;
+}
+
+.dateCell {
+  aspect-ratio: 1 / 1;
+  background-color: white;
+  text-align: center;
+  padding: 0.75rem 0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inMonth {
+  color: #222;
+  font-weight: 500;
+}
+
+.outMonth {
+  color: #ccc;
+  font-weight: normal;
+  cursor: default;
+}
+
+.selected {
+  border: 2px solid #ff7e00;
+  font-weight: 700;
+  background-color: #fff0e1;
+}
+
+.dotGroup {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}

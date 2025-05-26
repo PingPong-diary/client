@@ -1,41 +1,31 @@
 import React, { useState } from "react";
 import dayjs from "dayjs";
+import { useNavigate } from "react-router-dom";
 import Layout from "../components/common/Layout";
 import Calendar from "../components/common/Calendar";
 
-const diaryCalendarData = {};
-
-const DiaryList = () => {
+const CalendarPage = () => {
   const [selectedDate, setSelectedDate] = useState(dayjs());
+  const navigate = useNavigate();
 
   const handleDateSelect = (date) => {
     setSelectedDate(date);
+    navigate(`/daily/write?date=${date.format("YYYY-MM-DD")}`);
   };
 
   return (
     <Layout>
       <div style={{ padding: "1rem" }}>
-        <h2>교환일기 목록</h2>
-
+        <h2>일정 보기</h2>
         <Calendar
           selectedDate={selectedDate}
           onDateSelect={handleDateSelect}
-          data={diaryCalendarData}
-          type="diary"
+          data={{}}
+          type="daily"
         />
-
-        <div style={{ marginTop: "2rem" }}>
-          <p>
-            <strong>{selectedDate.format("YYYY년 MM월 DD일")}</strong>의 일기
-          </p>
-          <ul>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
       </div>
     </Layout>
   );
 };
 
-export default DiaryList;
+export default CalendarPage;
