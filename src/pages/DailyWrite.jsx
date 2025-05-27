@@ -45,7 +45,7 @@ const DailyWrite = () => {
         </div>
 
         {showPicker && (
-          <div style={{ marginBottom: "1rem" }}>
+          <div className={styles.datePickerWrapper}>
             <DatePicker
               selected={date}
               onChange={(date) => {

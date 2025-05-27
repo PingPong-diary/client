@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import dayjs from "dayjs";
 import Layout from "../components/common/Layout";
 import Calendar from "../components/common/Calendar";
+import styles from "../styles/pages/DiaryList.module.scss";
 
 const diaryCalendarData = {};
 
@@ -14,7 +15,7 @@ const DiaryList = () => {
 
   return (
     <Layout>
-      <div style={{ padding: "1rem" }}>
+      <div className={styles.pagePadding}>
         <h2>교환일기 목록</h2>
 
         <Calendar
@@ -24,7 +25,7 @@ const DiaryList = () => {
           type="diary"
         />
 
-        <div style={{ marginTop: "2rem" }}>
+        <div className={styles.topMargin}>
           <p>
             <strong>{selectedDate.format("YYYY년 MM월 DD일")}</strong>의 일기
           </p>

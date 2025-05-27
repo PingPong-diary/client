@@ -1,0 +1,85 @@
+.container {
+  padding: 16px;
+  background-color: #fffaf5;
+}
+
+.bannerImage {
+  width: 100%;
+  max-width: 900px;
+  max-height: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .bannerImage {
+    max-height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bannerImage {
+    max-height: 200px;
+    padding: 0 12px;
+  }
+}
+
+.listHeader {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.diaryList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.diaryCard {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: calc(50% - 8px);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.diaryCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.preview {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.meta {
+  font-size: 12px;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+}
+
+.yellowBackground {
+  background-color: #fff8cd;
+  padding: 32px 0;
+}
+
+.peachBackground {
+  background-color: #fef4ec;
+  padding: 32px 0;
+}
